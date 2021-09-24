@@ -92,7 +92,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  1)
  */
 
- bool rentAHouse(int houseType, bool job = true)
+bool rentAHouse(int houseType, bool job = true)
 {
     ignoreUnused(houseType, job);
     return {};
@@ -100,7 +100,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  2)
  */
- float scienceClassNumbers(int students, bool approved, int tableNumber = 20)
+float scienceClassNumbers(int students, bool approved, int tableNumber = 20)
 {
     ignoreUnused(students, approved, tableNumber);
     return {};
