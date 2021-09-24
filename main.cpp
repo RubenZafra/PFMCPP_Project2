@@ -16,15 +16,14 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ int
+ float
+ bool
+ double
+ void
+ char 
+ wchar_t 
+  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
         - just ignore wchar_t. you do not need to declare 3 variables of type 'wchar_t'
@@ -59,10 +58,23 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
-
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    int age = 27;
+    int petNumber = 3;
+    int words = 30;
+    float myHeight = 1.72f;
+    float distance = 21.734f;
+    float weight = 9.237f;
+    bool alive = true;
+    bool isCorrect = false;
+    bool graduate = true;
+    double a = 5.32652121;
+    double c = 200.45843321;
+    double e = 0.0000000012457;
+    char initial = 'a';
+    char last = 'z';
+    char letter = 'r';
+  
+    ignoreUnused(number, age, petNumber, words, myHeight, distance, weight, alive, isCorrect, graduate, a, e, c, initial, last, letter); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -80,42 +92,84 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  1)
  */
 
+bool rentAHouse(int houseType, bool job = true)
+{
+    ignoreUnused(houseType, job);
+    return {};
+}
 /*
  2)
  */
+float scienceClassNumbers(int students, bool approved, int tableNumber = 20)
+{
+    ignoreUnused(students, approved, tableNumber);
+    return {};
+}
 
 /*
  3)
  */
-
+int totalStudents(int studentsFirstGrade = 12, int studentsSecondGrade = 20)
+{
+    ignoreUnused(studentsFirstGrade, studentsSecondGrade);
+    return {};
+}
 /*
  4)
  */
-
+bool guilty(bool presentDuringMurder = false, bool alibi = true)
+{
+    ignoreUnused(presentDuringMurder, alibi);
+    return {};
+}
 /*
  5)
  */
-
+float populationPercentage(float married, float divorced)
+{
+    ignoreUnused(married, divorced);
+    return {};
+}
 /*
  6)
  */
-
+float travelStuff(double distance, double budget)
+{
+    ignoreUnused(distance, budget);
+    return {};
+}
 /*
  7)
  */
-
+bool bookACall(bool available = true, float time = 1)
+{
+    ignoreUnused(available, time);
+    return {};
+}
 /*
  8)
  */
-
+int petNumber(int cat = 2, int dog = 4, int hamster = 10)
+{
+    ignoreUnused(cat, dog, hamster);
+    return {};
+}
 /*
  9)
  */
-
+bool projectStats(bool partCompleted = true, bool review = false)
+{
+    ignoreUnused(partCompleted, review);
+    return {};
+}
 /*
  10)
  */
-
+bool weatherForecast(bool rain, bool sun, bool snow)
+{
+    ignoreUnused(rain, sun, snow);
+    return{};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -136,27 +190,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto houseRented = rentAHouse(1, true);
+
     //2)
-    
+    auto scienceClass = scienceClassNumbers(20, true, 20);
+
     //3)
-    
+    auto students = totalStudents(20, 10);
+
     //4)
-    
+    auto judgement = guilty(true, false);
+
     //5)
-    
+    auto population = populationPercentage(2000, 1200);
+
     //6)
-    
+    auto travel = travelStuff(234.456, 1200.543);
+
     //7)
-    
+    auto call = bookACall(true, 3); 
+
     //8)
-    
+    auto pet = petNumber(3, 1, 2);
+
     //9)
-    
+    auto project = projectStats(true, true);
+
     //10)
+    auto weather = weatherForecast(true, false, false);
+
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, houseRented, scienceClass, students, judgement, population, travel, call, pet, project, weather);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
