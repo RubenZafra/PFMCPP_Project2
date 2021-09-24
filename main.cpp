@@ -21,6 +21,7 @@ video: Chapter 2 - Part 3
  bool
  double
  void
+ char 
  wchar_t 
   
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
@@ -69,8 +70,11 @@ void variableDeclarations()
     double a = 5.32652121;
     double c = 200.45843321;
     double e = 0.0000000012457;
+    char initial = 'a';
+    char last = 'z';
+    char letter = 'r';
   
-    ignoreUnused(number, age, petNumber, words, myHeight, distance, weight, alive, isCorrect, graduate, a, e, c); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, age, petNumber, words, myHeight, distance, weight, alive, isCorrect, graduate, a, e, c, initial, last, letter); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -97,8 +101,8 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  */
  float scienceClassNumbers(int students, bool approved, int tableNumber = 20)
  {
-     ignoreUnused(students, approved, tableNumber);
-     return {};
+    ignoreUnused(students, approved, tableNumber);
+    return {};
  }
 
 /*
